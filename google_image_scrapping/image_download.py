@@ -1,11 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Code credit:
-https://towardsdatascience.com/image-scraping-with-python-a96feda8af2d
-Also thanks for Debjyoti Paul (my friend and data scientist at Amazon) for help with this
-"""
-
 import time
 import requests 
 import io
@@ -18,10 +10,8 @@ from selenium.webdriver.common.keys import Keys
 
 def fetch_image_urls_util(url,driver_path):
     images = []
-    # Open main window with URL A
     with webdriver.Chrome(executable_path=driver_path) as wd:
 
-        # Switch to the new window and open URL B
         try:
             wd.get(url)
         except:
